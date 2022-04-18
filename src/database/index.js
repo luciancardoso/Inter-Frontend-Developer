@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 function connect(){
 
-    mongoose.connect('mongodb://localhost:27017/?readPreference=primary&directConnection=true&ssl=false')
+    mongoose.connect('mongodb://localhost:27017/projeto-crud?readPreference=primary&directConnection=true&ssl=false')
 
     const db = mongoose.connection
 
