@@ -7,6 +7,14 @@
 
     <h1><%= title %></h1>
     <%- include('partials/navbar.ejs') %> 
+
+    <ul>
+        <% users.forEach((user) => { %>
+            <li>
+                Nome: <%= user.name %> - email: <%= user.email %> - idade: <%= user.age %> 
+            </li>    
+        <% }) %>
+    </ul>
     
     <!-- <%- include('partials/foot.ejs') %>  -->
 

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
     name: String,
@@ -9,11 +9,4 @@ const schema = new mongoose.Schema({
 
 const Model = mongoose.model('customers', schema)
 
-const register = new Model({
-    name: 'Lucian',
-    age: 30,
-    email: 'lucianteste@gmail.com',
-    password: '123456',
-})
-
-register.save()
+module.exports = Model
