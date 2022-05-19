@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head.ejs') %> 
+</head>
+<body>
+
+    <h1><%= title %></h1>
+    <%- include('partials/navbar.ejs') %> 
+
+    <!-- aqui estou verificado se ele existe, o tipo dele, se ele esta definido. 
+        e verificar se tem a mensagem !== estou verificando se o tipo não e undefined
+        se ele não for undefined ele vai exibir a mensagem
+    -->
+    <% if (typeof message !== 'undefined') { %>
+     <%= message %> 
+    <% } %>
+
+    <form action="/edit/<%= user._id %> " method="POST">
+        <div>
+            <label for="">Nome:</label>
+            <input type="text" name="name" placeholder="Digite o seu nome" value="<%= user.name %> ">
+        </div>
+        <div>
+            <label for="">Idade:</label>
+            <input type="text" name="age" placeholder="Digite sua idade" value="<%= user.age %> ">
+        </div>
+        <div>
+            <label for="">Email:</label>
+            <input type="text" name="email" placeholder="Digite seu email" value="<%= user.email %> ">
+        </div>
+        <button type="submit">Editar</button>
+    </form>
+    
+    <!-- <%- include('partials/foot.ejs') %>  -->
+
+</body>
+</html>
